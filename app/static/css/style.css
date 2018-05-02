@@ -1,0 +1,15 @@
+.relay {
+    width: 100%;
+    height: 150px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+    transition: border linear 0.1s;
+    align-items: center;
+    display: flex;
+}
+
+.relay:hover {
+    /*box-shadow: 4px 4px 10px red;*/
+    border: 3px solid white;
+}
