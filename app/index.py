@@ -4,7 +4,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-relay1 = os.popen("megaio 0 rread 1").readline()
+relay1 = os.popen("echo Hello world!").readline()
 relay2 = os.popen("megaio 0 rread 2").readline()
 relay3 = os.popen("megaio 0 rread 3").readline()
 relay4 = os.popen("megaio 0 rread 4").readline()
@@ -19,7 +19,7 @@ def home():
 
 @app.route('/relay/<int:rNum>')
 def editRelay(rNum):
-    status = os.popen("megaio 0 rread " + str(rNum)).readline()
+    status = str(os.popen("megaio 0 rread " + str(rNum)).readline())
     if status == 1:
         os.system("megaio 0 rwrite " + str(rNum) + " off")
     elif status == 0:
