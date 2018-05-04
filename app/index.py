@@ -45,6 +45,7 @@ def home():
     refreshRelayStatus()
     return render_template('dashboard.html', relay1=relay1, relay2=relay2, relay3=relay3, relay4=relay4, relay5=relay5, relay6=relay6, relay7=relay7, relay8=relay8)
 
+
 @app.route('/relay/<int:rNum>')
 @nocache
 def editRelay(rNum):
@@ -55,6 +56,7 @@ def editRelay(rNum):
         os.system("megaio 0 rwrite " + str(rNum) + " on")
     refreshRelayStatus()
     return render_template('dashboard.html', relay1=relay1, relay2=relay2, relay3=relay3, relay4=relay4, relay5=relay5, relay6=relay6, relay7=relay7, relay8=relay8)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)

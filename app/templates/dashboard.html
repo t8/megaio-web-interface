@@ -16,7 +16,7 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item">
-              <b>Mega-IO Dashboard</b>
+              <b><i class="fas fa-microchip" style="color: dodgerblue;"></i>&nbsp;Mega-IO Dashboard</b>
           </a>
           <span class="navbar-burger burger" data-target="navbarMenuHeroA">
             <span></span>
@@ -27,7 +27,7 @@
         <div id="navbarMenuHeroA" class="navbar-menu">
           <div class="navbar-end">
             <span class="navbar-item">
-              <a class="button is-dark is-inverted">
+              <a class="button is-dark is-inverted" href="https://github.com/tbaumer22/megaio-web-interface">
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
@@ -44,28 +44,28 @@
   <div class="hero-body">
     <div class="container has-text-centered">
         <h1 class="title" style="margin-bottom: 60px;">
-            Turn relays on and off:
+            <i class="fas fa-database" style="color: dodgerblue;"></i>&nbsp;Turn relays on and off:
         </h1>
         <div class="columns">
             <div class="column"></div>
             <div class="column relay">
                 <a id="relay-1" href="/relay/1">
-                    <span style="color: white; text-align: center;">Relay 1: {{ relay1 }}</span>
+                    <span style="color: white;">Relay 1: <b>{{ relay1 }}</b></span>
                 </a>
             </div>
             <div class="column relay">
                 <a id="relay-2" href="/relay/2">
-                    <span style="color: white; text-align: center;">Relay 2: {{ relay2 }}</span>
+                    <span style="color: white;">Relay 2: <b>{{ relay2 }}</b></span>
                 </a>
             </div>
             <div class="column relay">
                 <a id="relay-3" href="/relay/3">
-                    <span style="color: white; text-align: center;">Relay 3: {{ relay3 }}</span>
+                    <span style="color: white;">Relay 3: <b>{{ relay3 }}</b></span>
                 </a>
             </div>
             <div class="column relay">
                 <a id="relay-4" href="/relay/4">
-                    <span style="color: white; text-align: center;">Relay 4: {{ relay4 }}</span>
+                    <span style="color: white;">Relay 4: <b>{{ relay4 }}</b></span>
                 </a>
             </div>
             <div class="column"></div>
@@ -74,26 +74,29 @@
             <div class="column"></div>
             <div class="column relay">
                 <a id="relay-5" href="/relay/5">
-                    <span style="color: white;">Relay 5: {{ relay5 }}</span>
+                    <span style="color: white;">Relay 5: <b>{{ relay5 }}</b></span>
                 </a>
             </div>
             <div class="column relay">
                 <a id="relay-6" href="/relay/6">
-                    <span style="color: white;">Relay 6: {{ relay6 }}</span>
+                    <span style="color: white;">Relay 6: <b>{{ relay6 }}</b></span>
                 </a>
             </div>
             <div class="column relay">
                 <a id="relay-7" href="/relay/7">
-                    <span style="color: white;">Relay 7: {{ relay7 }}</span>
+                    <span style="color: white;">Relay 7: <b>{{ relay7 }}</b></span>
                 </a>
             </div>
             <div class="column relay">
                 <a id="relay-8" href="/relay/8">
-                    <span style="color: white;">Relay 8: {{ relay8 }}</span>
+                    <span style="color: white;">Relay 8: <b>{{ relay8 }}</b></span>
                 </a>
             </div>
             <div class="column"></div>
         </div>
+        <center>
+            <p>(1 = active & 0 = inactive)</p>
+        </center>
     </div>
   </div>
 </section>
