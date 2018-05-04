@@ -15,7 +15,16 @@ relay6 = 0
 relay7 = 0
 relay8 = 0
 
+
 def refreshRelayStatus():
+    global relay1
+    global relay2
+    global relay3
+    global relay4
+    global relay5
+    global relay6
+    global relay7
+    global relay8
     relay1 = os.popen("megaio 0 rread 1").readline()
     relay2 = os.popen("megaio 0 rread 2").readline()
     relay3 = os.popen("megaio 0 rread 3").readline()
