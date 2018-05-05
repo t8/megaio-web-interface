@@ -49,10 +49,15 @@ def nocache(view):
 
 
 @app.route('/')
-@nocache
 def home():
+    return render_template('home.html')
+
+
+@app.route('/relay')
+@nocache
+def relayDashboard():
     refreshRelayStatus()
-    return render_template('dashboard.html', relay1=relay1, relay2=relay2, relay3=relay3, relay4=relay4, relay5=relay5, relay6=relay6, relay7=relay7, relay8=relay8)
+    return render_template('relayDash.html', relay1=relay1, relay2=relay2, relay3=relay3, relay4=relay4, relay5=relay5, relay6=relay6, relay7=relay7, relay8=relay8)
 
 
 @app.route('/relay/<int:rNum>')
@@ -64,7 +69,13 @@ def editRelay(rNum):
     elif status == 0:
         os.system("megaio 0 rwrite " + str(rNum) + " on")
     refreshRelayStatus()
-    return render_template('dashboard.html', relay1=relay1, relay2=relay2, relay3=relay3, relay4=relay4, relay5=relay5, relay6=relay6, relay7=relay7, relay8=relay8)
+    return render_template('relayDash.html', relay1=relay1, relay2=relay2, relay3=relay3, relay4=relay4, relay5=relay5, relay6=relay6, relay7=relay7, relay8=relay8)
+
+
+@app.route('/analog')
+@nocache
+def analogDashboard():
+    return render_template('analogDash.html')
 
 
 if __name__ == '__main__':

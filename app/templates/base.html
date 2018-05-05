@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <title>Mega-IO Dashboard</title>
+</head>
+<body>
+
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <b><i class="fas fa-microchip" style="color: dodgerblue;"></i>&nbsp;Mega-IO Dashboard</b>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/relay">
+                Edit Relays
+            </a>
+            <a class="navbar-item" href="/analog">
+                Edit Analog Inputs
+            </a>
+        </div>
+        <div class="navbar-end">
+            <span class="navbar-item">
+                <a class="button is-dark is-inverted" href="https://github.com/tbaumer22/megaio-web-interface">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Star it</span>
+                </a>
+            </span>
+        </div>
+    </div>
+    </div>
+</nav>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
